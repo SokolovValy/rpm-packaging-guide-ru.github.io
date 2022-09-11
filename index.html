@@ -465,7 +465,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#interpreted-code">Интерпретируемый код</a></li>
 </ul>
 </li>
-<li><a href="#building-software-from-source">Создание программного обеспечения из исходного кода</a>
+<li><a href="#building-software-from-source">Сборка программного обеспечения из исходного кода</a>
 <ul class="sectlevel3">
 <li><a href="#natively-compiled-code-building-software-from-source">Изначально скомпилированный код</a></li>
 <li><a href="#interpreted-code-building-software-from-source">Интерпретируемый код</a></li>
@@ -493,7 +493,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#rpm-packages">RPM Пакеты</a>
 <ul class="sectlevel3">
 <li><a href="#what-is-an-rpm">Что такое RPM?</a></li>
-<li><a href="#rpm-packaging-tools">RPM Packaging Tools</a></li>
+<li><a href="#rpm-packaging-tools">Инструменты для упаковки RPM</a></li>
 <li><a href="#rpm-packaging-workspace">Рабочее пространство для упаковки RPM</a></li>
 <li><a href="#what-is-a-spec-file">Что такое SPEC файл?</a></li>
 <li><a href="#buildroots">BuildRoots</a></li>
@@ -643,8 +643,7 @@ print("Hello World")</code></pre>
 </div>
 </li>
 <li>
-<p>Темы, представляющие интерес, или словарные термины упоминаются либо как ссылки на соответствующую документацию или веб-сайт, выделенные <strong>жирным</strong> шрифтом, либо <em>курсивом</em>. Первые упоминания некоторых терминов ссылаются на соответствующую документацию.
-The first occurrences of some terms link to their respective documentation.</p>
+<p>Темы, представляющие интерес, или словарные термины упоминаются либо как ссылки на соответствующую документацию или веб-сайт выделены <strong>жирным</strong> шрифтом, либо <em>курсивом</em>. Первые упоминания некоторых терминов ссылаются на соответствующую документацию.</p>
 </li>
 <li>
 <p>Названия утилит, команд и других элементов, обычно встречающихся в коде, написаны <code>моноширинным</code> шрифтом.</p>
@@ -672,7 +671,7 @@ The first occurrences of some terms link to their respective documentation.</p>
 <h2 id="prerequisites">Необходимые пакеты</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Чтобы следовать этому руководству, вам понадобятся пакеты, упомянутые ниже.</p>
+<p>Чтобы следовать этому руководству, Вам понадобятся пакеты, упомянутые ниже.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -711,10 +710,10 @@ The first occurrences of some terms link to their respective documentation.</p>
 <h2 id="Why-Package-Software-with-RPM">Зачем упаковывать программное обеспечение с помощью RPM?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Менеджер пакетов RPM (RPM) - это система управления пакетами, которая работает на Red Hat Enterprise Linux, CentOS и Fedora. RPM упрощает распространение, управление и обновление программного обеспечения, создаваемого для Red Hat Enterprise Linux, CentOS и Fedora. Многие поставщики программного обеспечения распространяют свое программное обеспечение через обычный архивный файл (например, архивный файл). Однако упаковка программного обеспечения в пакеты RPM имеет ряд преимуществ. Эти преимущества описаны ниже.</p>
+<p>Менеджер пакетов RPM (RPM) - это система управления пакетами, которая работает на Red Hat Enterprise Linux, CentOS и Fedora. RPM упрощает распространение, управление и обновление программного обеспечения, создаваемого для Red Hat Enterprise Linux, CentOS и Fedora. Многие поставщики программного обеспечения распространяют своё программное обеспечение через обычный архив (например, tarball). Однако, упаковка программного обеспечения в пакеты RPM имеет ряд преимуществ. Эти преимущества описаны ниже.</p>
 </div>
 <div class="paragraph">
-<p>С помощью RPM вы можете:</p>
+<p>С помощью RPM Вы можете:</p>
 </div>
 <div class="dlist">
 <dl>
@@ -814,7 +813,7 @@ Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.wgaJzv
 </div>
 </div>
 <div class="paragraph">
-<p>Файл <code>/home/mirek/rpmbuild/RPMS/x86_64/hello-world-1-1.x86_64.rpm</code> является вашим первым пакетом RPM. Его можно установить в систему и протестировать.</p>
+<p>Файл <code>/home/mirek/rpmbuild/RPMS/x86_64/hello-world-1-1.x86_64.rpm</code> является Вашим первым пакетом RPM. Его можно установить в систему и протестировать.</p>
 </div>
 </div>
 </div>
@@ -828,11 +827,11 @@ Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.wgaJzv
 <h3 id="what-is-source-code">Что такое Исходный код?</h3>
 <div class="paragraph">
 <p><strong>Исходный код </strong> - это понятные для человека инструкции к компьютеру, в которых описывается, как выполнить вычисления. Исходный код выражается с помощью
-<a href="https://en.wikipedia.org/wiki/Programming_language">языка программирования</a>
+<a href="https://ru.wikipedia.org/wiki/Язык_программирования">языка программирования</a>
 .</p>
 </div>
 <div class="paragraph">
-<p>В этом руководстве представлены три версии  <code>Hello World</code> программы, каждая из которых написана на разных языках программирования. Программы, написанные на этих трех разных языках, упаковываются по-разному и охватывают три основных варианта использования RPM-упаковщика.</p>
+<p>В этом руководстве представлены три версии программы <code>Hello World</code> , каждая из которых написана на разных языках программирования. Программы, написанные на этих трех разных языках, упаковываются по разному и охватывают три основных варианта использования RPM упаковщиком ПО.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -847,7 +846,7 @@ Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.wgaJzv
 </table>
 </div>
 <div class="paragraph">
-<p><code>Hello World</code> написано на <a href="https://www.gnu.org/software/bash/">bash</a>:</p>
+<p>Программа <code>Hello World</code>, написанная на <a href="https://www.gnu.org/software/bash/">bash</a>:</p>
 </div>
 <div class="paragraph">
 <p><code>bello</code></p>
@@ -860,7 +859,7 @@ printf "Hello World\n"</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><code>Hello World</code> написано на <a href="https://www.python.org/">Python</a>:</p>
+<p><code>Hello World</code>, написанная на <a href="https://www.python.org/">Python</a>:</p>
 </div>
 <div class="paragraph">
 <p><code>pello.py</code></p>
@@ -873,7 +872,7 @@ print("Hello World")</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><code>Hello World</code> написано на
+<p><code>Hello World</code>, написанная на
 <a href="https://en.wikipedia.org/wiki/C_%28programming_language%29">C</a>
 :</p>
 </div>
@@ -891,7 +890,7 @@ int main(void) {
 </div>
 </div>
 <div class="paragraph">
-<p>Целью каждой из трех программ является вывод <code>Hello World</code> в
+<p>Целью каждой из трех программ является вывод строки <code>Hello World</code> в
  командной строке.</p>
 </div>
 <div class="admonitionblock note">
@@ -915,7 +914,7 @@ int main(void) {
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Программа изначально скомпилирована..</p>
+<p>Программа изначально скомпилирована.</p>
 </li>
 <li>
 <p>Программа интерпретируется с помощью необработанной интерпретации.</p>
@@ -932,7 +931,7 @@ int main(void) {
 </div>
 <div class="paragraph">
 <p>Пакеты RPM, созданные таким образом, зависят от
-<a href="https://en.wikipedia.org/wiki/Microarchitecture">архитектуры</a>
+<a href="https://ru.wikipedia.org/wiki/Микроархитектура">архитектуры</a>
  Это означает, что если вы скомпилируете такое программное обеспечение на компьютере, использующем 64-разрядный (x86_64) процессор AMD или Intel, оно не будет выполняться на 32-разрядном (x86) процессоре AMD или Intel. В названии результирующего пакета будет указана архитектура.</p>
 </div>
 </div>
@@ -940,27 +939,28 @@ int main(void) {
 <h4 id="interpreted-code">Интерпретируемый код</h4>
 <div class="paragraph">
 <p>Некоторые языки программирования, такие как <a href="https://www.gnu.org/software/bash/">bash</a> или <a href="https://www.python.org/">Python</a>, не компилируются в машинный код. Вместо этого исходный код их программ выполняется шаг за шагом, без предварительных преобразований,
-<a href="https://en.wikipedia.org/wiki/Interpreter_%28computing%29">языковым интерпритатором</a>
+<a href="https://en.wikipedia.org/wiki/Interpreter_%28computing%29">языковым интерпретатором</a>
 или языковой виртуальной машиной.</p>
 </div>
 <div class="paragraph">
 <p>Программное обеспечение, написанное полностью на интерпретируемых языках программирования, не зависит от
 <a href="https://en.wikipedia.org/wiki/Microarchitecture">архитектуры</a>
+.
 Следовательно, результирующий пакет RPM будет иметь строку <code>noarch</code> в своем названии.</p>
 </div>
 <div class="paragraph">
-<p>Существует два типа интерпретируемых языков: <strong>байт-скомпилированные</strong> и <strong>необработанные интерпретируемые</strong>. Процесс сборки программ для этих двух типов отличается.</p>
+<p>Существует два типа интерпретируемых языков: языки, код которых <strong>исполняется напрямую</strong> и языки, код которых предварительно компилируется в <strong>байт-код</strong>. Процесс сборки программ для этих двух типов отличается.</p>
 </div>
 <div class="sect4">
-<h5 id="_программы_с_интерпретацией_raw">Программы с интерпретацией Raw</h5>
+<h5 id="_программы_с_прямой_интерпретацией">Программы с прямой интерпретацией</h5>
 <div class="paragraph">
-<p>Программы на языке с интерпретацией Raw вообще не нужно компилировать, они выполняются непосредственно интерпретатором.</p>
+<p>Программы на языке с прямой интерпретацией вообще не нужно компилировать, они выполняются непосредственно интерпретатором.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_программы_скомпилированные_в_байтах">Программы, скомпилированные в байтах</h5>
+<h5 id="_программы_скомпилированные_в_байт_код">Программы, скомпилированные в байт-код</h5>
 <div class="paragraph">
-<p>Языки, скомпилированные в байтах, должны быть скомпилированы в байтовый код, который затем выполняется виртуальной машиной языка.e.</p>
+<p>Программы, скомпилированные в байт-код, которые затем исполняются вируальной машиной соответствующего языка.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -969,7 +969,7 @@ int main(void) {
 <div class="title">Note</div>
 </td>
 <td class="content">
-Некоторые языки предоставляют выбор: они могут быть интерпретированы в формате raw или скомпилированы в байтах.
+Некоторые языки предоставляют выбор: они могут быть напрямую интерпритированы или скомпилированы в байт-код.
 </td>
 </tr>
 </table>
@@ -978,20 +978,20 @@ int main(void) {
 </div>
 </div>
 <div class="sect2">
-<h3 id="building-software-from-source">Создание программного обеспечения из исходного кода</h3>
+<h3 id="building-software-from-source">Сборка программного обеспечения из исходного кода</h3>
 <div class="paragraph">
 <p>В этом разделе объясняется сборка программного обеспечения на основе его исходного кода.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Для программного обеспечения, написанного на скомпилированных языках, исходный код проходит процесс <strong>сборки</strong>, создавая машинный код. Этот процесс, обычно называемый <strong>компиляцией</strong> или <strong>переводом</strong>, различается для разных языков. Полученное встроенное программное обеспечение может быть <strong>запущено</strong> или "<strong>выполнено</strong>", что заставляет компьютер выполнять задачу, указанную программистом.</p>
+<p>Для программного обеспечения, написанного на компилируемых языках, исходный код проходит процесс <strong>сборки</strong>, создавая машинный код. Этот процесс, обычно называемый <strong>компиляцией</strong> или <strong>переводом</strong>, различается для разных языков. Полученное в результате сборки программное обеспечение может быть <strong>запущено</strong> или "<strong>выполнено</strong>", что заставит компьютер выполнять задачу, поставленную программистом.</p>
 </li>
 <li>
-<p>Для программного обеспечения, написанного на необработанных интерпретируемых языках, исходный код не создается, а выполняется напрямую.</p>
+<p>Для программного обеспечения, написанного на прямо интерпретируемых языках, исходный код не компилируется, а выполняется напрямую.</p>
 </li>
 <li>
-<p>Для программного обеспечения, написанного на интерпретируемых языках с байтовой компиляцией, исходный код компилируется в байтовый код, который затем выполняется виртуальной машиной языка.</p>
+<p>Для программного обеспечения, написанного на интерпретируемых языках с компиляцией в байт-код, исходный код компилируется в байт-код, который затем выполняется виртуальной машиной соответствующего языка.</p>
 </li>
 </ul>
 </div>
@@ -1020,7 +1020,7 @@ int main(void) {
 <div class="paragraph">
 <p>Вызовите компилятор
 <a href="https://en.wikipedia.org/wiki/C_%28programming_language%29">C</a>
-из коллекции компиляторов GNU  (<a href="https://gcc.gnu.org/">GCC</a>) чтобы скомпилировать исходный код в двоичный файл:</p>
+из коллекции компиляторов GNU  (<a href="https://gcc.gnu.org/">GCC</a>) чтобы скомпилировать исходный код в бинарный файл:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1028,7 +1028,7 @@ int main(void) {
 </div>
 </div>
 <div class="paragraph">
-<p>Выполните результирующий двоичный файл вывода<code>cello</code>.</p>
+<p>Запустите бинарный файл <code>cello</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1043,8 +1043,8 @@ Hello World</code></pre>
 <div class="sect4">
 <h5 id="_автоматическая_сборка">Автоматическая сборка</h5>
 <div class="paragraph">
-<p>Вместо того, чтобы создавать исходный код вручную, вы можете автоматизировать сборку. Это обычная практика, используемая в крупномасштабном программном обеспечении. Автоматизация сборки осуществляется путем создания  <code>Makefile</code> и затем запускаем
-<a href="http://www.gnu.org/software/make/">GNU <code>make</code></a> utility.</p>
+<p>Вместо того, чтобы создавать исходный код вручную, вы можете автоматизировать сборку. Это обычная практика, используемая в крупномасштабном программном обеспечении. Автоматизация сборки осуществляется путем создания  <code>Makefile</code> и последующим запуском утилиты
+<a href="http://www.gnu.org/software/make/">GNU <code>make</code></a>.</p>
 </div>
 <div class="paragraph">
 <p>Чтобы настроить автоматическую сборку, создайте файл с именем  <code>Makefile</code> в том же каталоге, что и<code>cello.c</code>:</p>
@@ -1101,15 +1101,15 @@ Hello World</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Теперь вы скомпилировали программу как вручную, так и с помощью инструмента сборки.</p>
+<p>Теперь Вы скомпилировали программу как вручную, так и с помощью инструмента сборки.</p>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="interpreted-code-building-software-from-source">Интерпретируемый код</h4>
 <div class="paragraph">
-<p>Следующие два примера демонстрируют байтовую компиляцию программы, написанной на
-<a href="https://www.python.org/">Python</a> и raw - интерпретация программы, написанной на
+<p>Следующие два примера демонстрируют компиляцию в байт-код программы, написанной на
+<a href="https://www.python.org/">Python</a> и прямую интерпретацию программы, написанной на
 <a href="https://www.gnu.org/software/bash/">bash</a>.</p>
 </div>
 <div class="admonitionblock note">
@@ -1122,20 +1122,20 @@ Hello World</code></pre>
 <div class="paragraph">
 <p>В двух приведенных ниже примерах<code>#!</code> строка в верхней части файла называется
 <a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29">shebang</a>
-и не является частью исходного кода языка программирования.</p>
+и не является частью исходного кода.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29">shebang</a>
-позволяет использовать текстовый файл в качестве исполняемого файла: загрузчик системной программы анализирует строку, содержащую <strong>shebang</strong>, чтобы получить путь к двоичному исполняемому файлу, который затем используется в качестве интерпретатора языка программирования.</p>
+позволяет использовать текстовый файл в качестве исполняемого файла: загрузчик системной программы анализирует строку, содержащую <strong>shebang</strong>, чтобы получить путь к бинарному исполняемому файлу, который затем используется в качестве интерпретатора языка программирования.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="sect4">
-<h5 id="byte-compiled-code">Скомпилированный в байт-код</h5>
+<h5 id="byte-compiled-code">Компиляция байт-кода</h5>
 <div class="paragraph">
-<p>В этом примере вы скомпилируете  <code>pello.py</code> - программу, написанную на Python в виде байт-кода, который затем выполняется виртуальной машиной на языке Python. Исходный код Python также может быть интерпретирован в формате raw, но версия, скомпилированная в байтах, быстрее. Следовательно, упаковщики RPM предпочитают упаковывать версию, скомпилированную в байтах, для распространения среди конечных пользователей.</p>
+<p>В этом примере Вы скомпилируете в  байт-код <code>pello.py</code> - программу, написанную на Python, который затем выполняется виртуальной машиной Python. Исходный код Python также может быть напрямую интерпретирован, но исполнение байт-кода быстрее. Следовательно, RPM упаковщики  предпочитают упаковывать скомпилированный байт-код для распространения среди конечных пользователей.</p>
 </div>
 <div class="paragraph">
 <p><code>pello.py</code></p>
@@ -1148,7 +1148,7 @@ print("Hello World")</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Процедура байтовой компиляции программ отличается для разных языков. Это зависит от языка, виртуальной машины языка, а также инструментов и процессов, используемых с этим языком.</p>
+<p>Процедура программ в байт-код отличается для разных языков. Это зависит от языка, виртуальной машины языка, а также инструментов и процессов, используемых с этим языком.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1157,14 +1157,14 @@ print("Hello World")</code></pre>
 <div class="title">Note</div>
 </td>
 <td class="content">
-<a href="https://www.python.org/">Python</a> часто компилируется в бай-код, но не так, как описано здесь. Следующая процедура направлена не на то, чтобы соответствовать стандартам сообщества, а на то, чтобы быть простой. Для получения практических рекомендаций по Python см. раздел
+<a href="https://www.python.org/">Python</a> часто компилируется в байт-код, но не так, как описано здесь. Следующая процедура направлена не на то, чтобы соответствовать стандартам сообщества, а на то, чтобы быть простой. Для получения практических рекомендаций по Python см. раздел
 <a href="https://docs.python.org/2/library/distribution.html">Упаковка и распространение программного обеспечения</a>.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Байтовая компиляция <code>pello.py</code>:</p>
+<p>Компиляция <code>pello.py</code> в байт-код:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1185,9 +1185,9 @@ Hello World</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="raw-interpreted">Необработанный интерпретируемый код</h5>
+<h5 id="raw-interpreted">Напрямую интепретированный код</h5>
 <div class="paragraph">
-<p>В этом примере вы будете интерпретировать программу <code>bello</code> написанную на встроенном языке оболочки
+<p>В этом примере Вы будете интерпретировать программу <code>bello</code> написанную на встроенном языке оболочки
 <a href="https://www.gnu.org/software/bash/">bash</a>.</p>
 </div>
 <div class="paragraph">
@@ -1201,8 +1201,8 @@ printf "Hello World\n"</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Программы, написанные на языках сценариев оболочки, таких как  <em>bash</em>, интерпретируются в необработанном виде.
-Следовательно, вам нужно только сделать файл с исходным кодом исполняемым и запустить его:</p>
+<p>Для программ, написанных на языках сценариев оболочки, таких как  <em>bash</em>, используется прямая интерпретация.
+Следовательно, Вам нужно только сделать файл с исходным кодом исполняемым и запустить его:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1232,11 +1232,11 @@ Hello World</code></pre>
 </table>
 </div>
 <div class="paragraph">
-<p>В следующем примере мы создаем исправление из исходного исходного кода с помощью
-<code>diff</code>, а затем используем <code>patch</code>. Исправление использует в следующих разделяах при создании RPM и работе со .spec-файлом. <a href="#working-with-spec-files">Работа со SPEK файлами</a>.</p>
+<p>В следующем примере мы создаем исправление из исходного кода с помощью
+<code>diff</code>, а затем используем <code>patch</code>. Исправление использует в следующих разделах при создании RPM и работе со .spec-файлом. <a href="#working-with-spec-files">Работа со SPEC файлами</a>.</p>
 </div>
 <div class="paragraph">
-<p>Как исправление связано с упаковкой RPM? В упаковке, вместо того, чтобы просто изменять исходный исходный код, мы сохраняем его и используем на нем исправления.</p>
+<p>Как исправление связано с упаковкой RPM? В упаковке, вместо того, чтобы просто изменять исходный код, мы сохраняем его и используем на нем исправления.</p>
 </div>
 <div class="paragraph">
 <p>Чтобы создать патч для <code>cello.c</code>:</p>
@@ -1244,14 +1244,14 @@ Hello World</code></pre>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Сохраним оригинальный исходный код:</p>
+<p>Сохраним исходный код:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ cp cello.c cello.c.orig</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Это наиболее распространённый способ сохранить файл исходного кода</p>
+<p>Это наиболее распространённый способ сохранить файл исходного кода.</p>
 </div>
 </li>
 <li>
@@ -1317,7 +1317,7 @@ int main(void) {
 </div>
 <div class="paragraph">
 <p>Мы сохраняем исходный файл <code>cello.c</code>, потому что при создании RPM используется исходный файл, а не измененный. Дополнительные сведения см. в разделе
-<a href="#Работа со SPEC-файлом">[Работа со SPEC-файлом]</a>.</p>
+<a href="#working-with-spec-files">Работа со SPEC файлами</a>.</p>
 </div>
 </li>
 </ol>
@@ -1377,7 +1377,7 @@ Hello World from my very first patch!</code></pre>
 .</p>
 </div>
 <div class="paragraph">
-<p>В контексте этого руководства, <em>Произвольный артефакт</em> - это все, что устанавливается из RPM в систему. Для RPM и для системы это может быть скрипт, двоичный файл, скомпилированный из исходного кода пакета, предварительно скомпилированный двоичный файл или любой другой файл.</p>
+<p>В контексте этого руководства, <em>Произвольный артефакт</em> - это все, что устанавливается из RPM в систему. Для RPM и для системы это может быть скрипт, бинарный файл, скомпилированный из исходного кода пакета, предварительно скомпилированный бинарный файл или любой другой файл.</p>
 </div>
 <div class="paragraph">
 <p>Мы рассмотрим два популярных способа размещения <em>произвольных артефактов</em> в системе: с помощью команды <code>install</code> и с помощью команды <code>make install</code>.</p>
@@ -1390,7 +1390,7 @@ Hello World from my very first patch!</code></pre>
 <a href="http://www.gnu.org/software/coreutils/coreutils.html">coreutils</a>), которая помещает артефакт в указанный каталог в файловой системе с указанным набором разрешений.</p>
 </div>
 <div class="paragraph">
-<p>В приведенном ниже примере будет использоваться файл <code>bello</code>  который мы ранее создали в качестве произвольного артефакта, зависящего от нашего метода установки.  Обратите внимание, что вам либо понадобятся разрешения  <a href="http://www.sudo.ws/">sudo</a>, либо запустите эту команду от имени root, исключая часть команды <code>sudo</code>.</p>
+<p>В приведенном ниже примере будет использоваться файл <code>bello</code>,  который мы ранее создали в качестве произвольного артефакта, зависящего от нашего метода установки.  Обратите внимание, что Вам либо понадобятся разрешения  <a href="http://www.sudo.ws/">sudo</a>, либо запустите эту команду от имени root, исключая часть команды <code>sudo</code>.</p>
 </div>
 <div class="paragraph">
 <p>В этом примере <code>install</code> помещает файл <code>bello</code> в <code>/usr/bin</code> с разрешениями, общими для исполняемых скриптов:</p>
@@ -1417,7 +1417,7 @@ Hello World</code></pre>
 <div class="sect3">
 <h4 id="make-install">Использование команды make install</h4>
 <div class="paragraph">
-<p>Популярным автоматизированным способом установки встроенного программного обеспечения в систему является использование команды <code>make install</code>. Вы указываете, как установить произвольные артефакты в систему в файле <code>Makefile</code>.</p>
+<p>Популярным автоматизированным способом установки программного обеспечения в систему является использование команды <code>make install</code>. Вы указываете, как установить произвольные артефакты в систему в файле <code>Makefile</code>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1455,7 +1455,7 @@ install:
 является встроенной в  <a href="http://www.gnu.org/software/make/">GNU make</a> и обычно используется для указания установки в каталог, отличный от корневого каталога.</p>
 </div>
 <div class="paragraph">
-<p>Теперь вы можете использовать <code>Makefile</code> не только для создания программного обеспечения, но и для его установки в целевую систему.</p>
+<p>Теперь вы можете использовать <code>Makefile</code> не только для сборки программного обеспечения, но и для его установки в систему.</p>
 </div>
 <div class="paragraph">
 <p>Для сборки и установки программы <code>cello.c</code>:</p>
@@ -1521,7 +1521,7 @@ Hello World</code></pre>
 <p>Программное обеспечение должно распространяться с
 <a href="https://en.wikipedia.org/wiki/Software_license">лицензией</a>
 . Для примера мы будем использовать лицензию
-<a href="https://www.gnu.org/licenses/quick-guide-gplv3.html">GPLv3</a>. Текст лицензии помещается в файл <code>LICENSE</code>, для каждой из примеров программ. Упаковщику RPM необходимо иметь дело с файлами лицензий при упаковке.</p>
+<a href="https://www.gnu.org/licenses/quick-guide-gplv3.html">GPLv3</a>. Текст лицензии помещается в файл <code>LICENSE</code> для каждой из примеров программ. Упаковщику RPM необходимо иметь дело с файлами лицензий при упаковке.</p>
 </div>
 <div class="paragraph">
 <p>Для использования со следующими примерами создайте файл  <code>LICENSE</code>:</p>
@@ -1554,7 +1554,7 @@ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</cod
 <h4 id="bello">bello</h4>
 <div class="paragraph">
 <p>Проект <em>bello</em> реализует <code>Hello World</code> в
-<a href="https://www.gnu.org/software/bash/">bash</a>. Реализация содержит только сценарий оболочки <code>bello</code>, поэтому результирующий  <code>tar.gz</code> aархив будет содержать только один файл, кроме файла  <code>LICENSE</code>. Давайте предположим, что это версия программы - <code>0.1</code></p>
+<a href="https://www.gnu.org/software/bash/">bash</a>. Реализация содержит только сценарий оболочки <code>bello</code>, поэтому результирующий архив <code>tar.gz</code> будет содержать только один файл, кроме файла  <code>LICENSE</code>. Давайте предположим, что это версия программы - <code>0.1</code></p>
 </div>
 <div class="paragraph">
 <p>Подготовьте проект <em>bello</em> для распространения:</p>
@@ -1596,11 +1596,11 @@ $ mv /tmp/bello-0.1.tar.gz ~/rpmbuild/SOURCES/</code></pre>
 <div class="paragraph">
 <p>Проект <em>pello</em> реализует <code>Hello World</code> на
 <a href="https://www.python.org/">Python</a>. Реализация содержит только программу
-<code>pello.py</code>, так что результирующий <code>tar.gz</code> будет содержать только один файл, кроме файла  <code>LICENSE</code>. Предположим, что это версия программы -
+<code>pello.py</code>, так что результирующий архив <code>tar.gz</code> будет содержать только один файл, кроме файла  <code>LICENSE</code>. Предположим, что это версия программы -
 <code>0.1.1</code></p>
 </div>
 <div class="paragraph">
-<p>Prepare the <em>pello</em> project for distribution:</p>
+<p>Подготовьте проект <em>pello</em> для распространения:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1617,7 +1617,7 @@ $ cp /tmp/LICENSE /tmp/pello-0.1.1/</code></pre>
 </div>
 </li>
 <li>
-<p>Создайте архив для распространения и переместите его вo <code>~/rpmbuild/SOURCES/</code>:</p>
+<p>Создайте архив для распространения и переместите его в <code>~/rpmbuild/SOURCES/</code>:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ cd /tmp/
@@ -1638,21 +1638,21 @@ $ mv /tmp/pello-0.1.1.tar.gz ~/rpmbuild/SOURCES/</code></pre>
 <h4 id="cello">cello</h4>
 <div class="paragraph">
 <p>Проект <em>cello</em> реализует <code>Hello World</code> на
-<a href="https://en.wikipedia.org/wiki/C_%28programming_language%29">C</a>
+<a href="https://ru.wikipedia.org/wiki/Си_(язык_программирования)">C</a>
 . Реализация содержит только файлы <code>cello.c</code> и
-<code>Makefile</code>, поэтому результирующий <code>tar.gz</code> архив будет содержать только два файла, кроме файла <code>LICENSE</code>. Давайте предположим, что это версия программы - <code>1.0</code></p>
+<code>Makefile</code>, поэтому результирующий архив <code>tar.gz</code>  будет содержать только два файла, помимо файла <code>LICENSE</code>. Давайте предположим, что это версия программы - <code>1.0</code></p>
 </div>
 <div class="paragraph">
 <p>Обратите внимание, что <code>patch</code> не распространяется в архиве вместе с программой.
-Упаковщик RPM применяет исправление при создании RPM. Патч будет помещен в каталог <code>~/rpmbuild/SOURCES/</code> рядом с <code>.tar.gz</code>.</p>
+Упаковщик RPM применяет исправление при создании RPM. Патч будет помещен в каталог <code>~/rpmbuild/SOURCES/</code> рядом с <code>.tar.gz</code> архивом.</p>
 </div>
 <div class="paragraph">
-<p>Prepare the <em>cello</em> project for distribution:</p>
+<p>Подготовьте проект <em>cello</em> для распространения:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Поместите файлы в один каталог::</p>
+<p>Поместите файлы в один каталог:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ mkdir /tmp/cello-1.0
@@ -1722,11 +1722,11 @@ $ mv /tmp/cello-1.0.tar.gz ~/rpmbuild/SOURCES/</code></pre>
 </div>
 <div class="paragraph">
 <p>Хотя эти дистрибутивы являются целевой средой, данное руководство в основном применимо ко всем дистрибутивам, основанным на
-<a href="https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based">RPM based</a>
+<a href="https://ru.wikipedia.org/wiki/Список_дистрибутивов_Linux">RPM based</a>
 .  Однако инструкции должны быть адаптированы для функций, специфичных для дистрибутива, таких как обязательные элементы установки, рекомендации или макросы.</p>
 </div>
 <div class="paragraph">
-<p>В этом руководстве не предполагается никаких предварительных знаний об упаковке программного обеспечения для любой операционной системы, Linux или какой-либо другой.</p>
+<p>В этом руководстве не предполагается никаких предварительных знаний об упаковке программного обеспечения для операционных систем Linux или какой-либо другой.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1735,8 +1735,8 @@ $ mv /tmp/cello-1.0.tar.gz ~/rpmbuild/SOURCES/</code></pre>
 <div class="title">Note</div>
 </td>
 <td class="content">
-Если вы не знаете, что такое программный пакет или дистрибутив GNU/Linux, рассмотрите возможность изучения некоторых статей на темы
-<a href="https://en.wikipedia.org/wiki/Linux">Linux</a> и
+Если Вы не знаете, что такое программный пакет или дистрибутив GNU/Linux, рассмотрите возможность изучения некоторых статей на темы
+<a href="https://ru.wikipedia.org/wiki/Linux">Linux</a> и
 <a href="https://en.wikipedia.org/wiki/Package_manager">Package Managers</a>.
 </td>
 </tr>
@@ -1769,13 +1769,13 @@ $ mv /tmp/cello-1.0.tar.gz ~/rpmbuild/SOURCES/</code></pre>
 </ul>
 </div>
 <div class="paragraph">
-<p>SRPMs и двоичные RPMs имеют общий формат файла и инструментарий, но имеют разное содержимое и служат разным целям. SRPM содержит исходный код, при необходимости исправления к нему и файл спецификации, в котором описывается, как встроить исходный код в двоичный RPM. Бинарный RPM содержит двоичные файлы, созданные из исходных текстов и патчей.</p>
+<p>SRPMs и бинарные RPMs имеют общий формат файла и инструментарий, но имеют разное содержимое и служат разным целям. SRPM содержит исходный код, при необходимости исправления к нему и файл спецификации, в котором описывается, как встроить исходный код в бинарный RPM. Бинарный RPM содержит двоичные файлы, созданные из исходных текстов и патчей.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rpm-packaging-tools">RPM Packaging Tools</h4>
+<h4 id="rpm-packaging-tools">Инструменты для упаковки RPM</h4>
 <div class="paragraph">
-<p>Пакет<code>rpmdevtools</code>, установленный на этпе <a href="#prerequisites">Необходимые пакеты</a>, provides предоставляет несколько утилит для упаковки RPM. Чтобы перечислить эти утилиты, запустите:</p>
+<p>Пакет<code>rpmdevtools</code>, установленный на этапе <a href="#prerequisites">Необходимые пакеты</a>, предоставляет несколько утилит для упаковки RPM. Чтобы перечислить эти утилиты, запустите:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1821,11 +1821,11 @@ $ tree ~/rpmbuild/
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">BUILD</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">При сборке пакетов здесь создаются различные каталоги     <code>%buildroot</code>. Это полезно для расследования неудачной сборки, если выходные данные журналов не содержат достаточной информации.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Содержит все файлы, которые появляются при создании пакета.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RPMS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Двоичные RPM создаются здесь, в подкаталогах для разных архитектур, например, в подкаталогах<code>x86_64</code> и <code>noarch</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Бинарные RPM создаются здесь, в подкаталогах для разных архитектур, например, в подкаталогах<code>x86_64</code> и <code>noarch</code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SOURCES</p></td>
@@ -1833,11 +1833,11 @@ $ tree ~/rpmbuild/
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SPECS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Упаковщик помещает сюда файлы спецификаций..</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Упаковщик помещает сюда файлы спецификаций.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SRPMS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Когда rpmbuild используется для построения SRPM вместо двоичного RPM, результирующий SRPM создается здесь.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Когда rpmbuild используется для сборки SRPM вместо бинарного RPM, результирующий SRPM создается здесь.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1881,7 +1881,7 @@ $ tree ~/rpmbuild/
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>License</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Лицензия на упаковываемое программное обеспечение.
-Fля пакетов, распространяемых в дистрибутивах сообщества, таких как <a href="https://getfedora.org/">Fedora</a>, это должна быть лицензия с открытым исходным кодом, соответствующая рекомендациям по лицензированию конкретного дистрибутива.</p></td>
+Для пакетов, распространяемых в дистрибутивах сообщества, таких как <a href="https://getfedora.org/">Fedora</a>, это должна быть лицензия с открытым исходным кодом, соответствующая рекомендациям по лицензированию конкретного дистрибутива.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>URL</code></p></td>
@@ -1901,15 +1901,15 @@ Fля пакетов, распространяемых в дистрибутив
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>BuildRequires</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Разделенный запятыми или пробелами список пакетов, необходимых для сборки программы, написанной на скомпилированном языке. Может быть несколько записей <code>BuildRequires</code>, каждая в отдельной строке в файле спецификации.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Разделённый запятыми или пробелами список пакетов, необходимых для сборки программы, написанной на скомпилированном языке. Может быть несколько записей <code>BuildRequires</code>, каждая в отдельной строке в SPEC файле.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Requires</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Разделенный запятыми или пробелами список пакетов, необходимых программному обеспечению для запуска после установки. Может быть несколько записей <code>Requires</code>, каждая в отдельной строке в файле спецификации.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Разделённый запятыми или пробелами список пакетов, необходимых программному обеспечению для запуска после установки. Может быть несколько записей <code>Requires</code>, каждая в отдельной строке в SPEC файле.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ExcludeArch</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Если часть программного обеспечения не может работать на определенной архитектуре процессора, вы можете исключить эту архитектуру здесь.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Если часть программного обеспечения не может работать на определенной архитектуре процессора, Вы можете исключить эту архитектуру здесь.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1959,11 +1959,11 @@ python-2.7.5-34.el7.x86_64</code></pre>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>%install</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Команда или серия команд для копирования требуемых артефактов сборки из <code>%builddir</code> (где происходит сборка) в<code>%buildroot</code> каталог (который содержит структуру каталогов с файлами, подлежащими упаковке). Обычно это означает копирование файлов из <code>~/rpmbuild/BUILD</code> в <code>~/rpmbuild/BUILDROOT</code> и создание необходимых каталогов <code>~/rpmbuild/BUILDROOT</code>.  Это выполняется только при создании пакета, а не при установке пакета конечным пользователем. Подробности см в разделе <a href="#working-with-spec-files">Работа со SPEK файлом</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Команда или серия команд для копирования требуемых артефактов сборки из <code>%builddir</code> (где происходит сборка) в<code>%buildroot</code> каталог (который содержит структуру каталогов с файлами, подлежащими упаковке). Обычно это означает копирование файлов из <code>~/rpmbuild/BUILD</code> в <code>~/rpmbuild/BUILDROOT</code> и создание необходимых каталогов <code>~/rpmbuild/BUILDROOT</code>.  Это выполняется только при создании пакета, а не при установке пакета конечным пользователем. Подробности см. в разделе <a href="#working-with-spec-files">Работа со SPEK файлом</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>%check</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Команда или серия команд для тестирования программного обеспечения. Обычно это включает в себя такие вещи, как модульные тесты.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Команда или серия команд для тестирования программного обеспечения. Обычно включает в себя такие вещи, как модульные тесты.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>%files</code></p></td>
@@ -1991,12 +1991,12 @@ python-2.7.5-34.el7.x86_64</code></pre>
 <div class="paragraph">
 <p>В контексте упаковки RPM "buildroot" - это среда
 <a href="https://en.wikipedia.org/wiki/Chroot">chroot</a>
-Это означает, что артефакты сборки размещаются здесь с использованием той же иерархии файловой системы, что и в системе конечного пользователя, при этом "buildroot" выступает в качестве корневого каталога. Размещение артефактов сборки должно соответствовать стандарту иерархии файловой системы системы конечного пользователя.</p>
+Это означает, что артефакты сборки размещаются здесь с использованием той же иерархии файловой системы, что и в системе конечного пользователя, при этом "buildroot" выступает в качестве корневого каталога. Размещение артефактов сборки должно соответствовать стандарту иерархии файловой системы конечного пользователя.</p>
 </div>
 <div class="paragraph">
 <p>Файлы в "buildroot" позже помещаются в архив
 <a href="https://en.wikipedia.org/wiki/Cpio">cpio</a>
-который становится основной частью RPM. Когда RPM устанавливается в системе конечного пользователя, эти файлы извлекаются в корневом каталоге, сохраняя правильную иерархию.</p>
+, который становится основной частью RPM. Когда RPM устанавливается в системе конечного пользователя, эти файлы извлекаются в корневой каталог, сохраняя правильную иерархию.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2006,7 +2006,7 @@ python-2.7.5-34.el7.x86_64</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Начиная с выпуска Red Hat Enterprise Linux 6, программа <code>rpmbuild</code> меет свои собственные значения по умолчанию. Поскольку переопределение этих значений по умолчанию приводит к ряду проблем, Red Hat не рекомендует определять собственное значение этого макроса. Вы можете использовать макрос
+<p>Начиная с выпуска Red Hat Enterprise Linux 6, программа <code>rpmbuild</code> имеет свои собственные значения макросов по умолчанию. Поскольку переопределение этих значений по умолчанию приводит к ряду проблем, Red Hat не рекомендует определять собственное значение этого макроса. Вы можете использовать макрос
 <code>%{buildroot}</code>  с параметрами по умолчанию из каталога <code>rpmbuild</code>.</p>
 </div>
 </td>
@@ -2020,7 +2020,7 @@ python-2.7.5-34.el7.x86_64</code></pre>
 <p><a href="https://rpm-software-management.github.io/rpm/manual/macros.html">Макрос RPM</a> - это прямая замена текста, которая может быть условно назначена на основе необязательной оценки оператора при использовании определенной встроенной функциональности. Это означает, что Вы можете заставить RPM выполнять замены текста за Вас.</p>
 </div>
 <div class="paragraph">
-<p>Это полезно, например, при многократной ссылке на <em>Version</em> упакованного программного обеспечения в файле спецификации. Вы определяете <em>Version</em> только один раз - в макросе <code>%{version}</code>. Затем используйте <code>%{version}</code> во всем файле спецификации. Каждое вхождение будет автоматически заменено <em>Version</em> , которую вы определили ранее.</p>
+<p>Это полезно, например, при многократной ссылке на <em>Version</em> упакованного программного обеспечения в файле спецификации. Вы определяете <em>Version</em> только один раз - в макросе <code>%{version}</code>. Затем используйте <code>%{version}</code> во всем файле спецификации. Каждый раз, во время определения строки <code>%{version}</code>, в конечном итоге будет подставлена <em>Version</em> программы, которую вы определили ранее.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2030,7 +2030,7 @@ python-2.7.5-34.el7.x86_64</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Если вы видите незнакомый макрос, вы можете узнать о нём с помощью:</p>
+<p>Если Вы видите незнакомый макрос, Вы можете узнать о нём с помощью:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2054,7 +2054,7 @@ $ rpm --eval %{_libexecdir}
 </table>
 </div>
 <div class="paragraph">
-<p>Распространенным макросом является <code>%{?dist}</code>, который обозначает “тег распространения”. Он сигнализирует, какой дистрибутив используется для сборки.</p>
+<p>Распространённым макросом является <code>%{?dist}</code>, который обозначает “тег распространения”. Он сигнализирует, какой дистрибутив используется для сборки.</p>
 </div>
 <div class="paragraph">
 <p>Например:</p>
@@ -2077,14 +2077,14 @@ $ rpm --eval %{?dist}
 <div class="sect3">
 <h4 id="working-with-spec-files">Работа со SPEK файлами</h4>
 <div class="paragraph">
-<p>Большая часть упаковки программного обеспечения в RPMs - это редактирование файла спецификации. В этом разделе мы обсудим, как создать и изменить файл спецификации.</p>
+<p>Большая часть упаковки программного обеспечения в RPMs - это редактирование файла спецификации. В этом разделе мы обсудим, как создать и изменить SPEC файл.</p>
 </div>
 <div class="paragraph">
-<p>Чтобы упаковать новое программное обеспечение, вам необходимо создать новый файл спецификации. Вместо того, чтобы писать его вручную с нуля, используйте утилиту <code>rpmdev-newspec</code>. Он создает незаполненный файл спецификации, и Вы заполняете необходимые директивы и поля.</p>
+<p>Чтобы упаковать новое программное обеспечение, Вам необходимо создать новый файл спецификации. Вместо того, чтобы писать его вручную с нуля, используйте утилиту <code>rpmdev-newspec</code>. Она создаёт незаполненный файл спецификации, и Вы заполняете необходимые директивы и поля.</p>
 </div>
 <div class="paragraph">
 <p>В этом руководстве мы используем три примера реализации программы 'Hello
-World!' созданной при подготовке <a href="#preparing-software-for-packaging">программного обеспечения для упаковки</a>:</p>
+World!', созданной при подготовке <a href="#preparing-software-for-packaging">программного обеспечения для упаковки</a>:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2119,7 +2119,7 @@ World!' созданной при подготовке <a href="#preparing-softw
 <div class="title">Note</div>
 </td>
 <td class="content">
-Некоторые текстовые редакторы, ориентированные на программистов, предварительно заполняют новый <code>.spec</code> файл с их собственным шаблоном спецификации. <code>rpmdev-newspec</code> предоставляет независимый от редактора метод, именно поэтому он используется в этом руководстве..
+Некоторые текстовые редакторы, ориентированные на программистов, предварительно заполняют новый <code>.spec</code> файл с их собственным шаблоном спецификации. <code>rpmdev-newspec</code> предоставляет независимый от редактора метод, именно поэтому он используется в этом руководстве.
 </td>
 </tr>
 </table>
@@ -2144,7 +2144,7 @@ pello.spec created; type minimal, rpm version &gt;= 4.11.</code></pre>
 </div>
 <div class="paragraph">
 <p>Изучите файлы. Директивы в них представляют собой директивы, описанные в разделе
-<a href="#what-is-a-spec-file">Что такое SPEK файл</a>.  В следующих разделах вы заполните эти файлы спецификаций.</p>
+<a href="#what-is-a-spec-file">Что такое SPEK файл</a>.  В следующих разделах Вы заполните эти файлы спецификаций.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2186,11 +2186,11 @@ pello.spec created; type minimal, rpm version &gt;= 4.11.</code></pre>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bello</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Программа, написанная на необработанном интерпретируемом языке программирования. Пример демонстрирует, когда исходный код не нужно создавать, а нужно только установить. Если необходимо упаковать предварительно скомпилированный двоичный файл, вы также можете использовать этот метод, поскольку двоичный файл также будет просто файлом.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Программа, написанная на необработанном интерпретируемом языке программирования. Пример демонстрирует, когда исходный код не нужно собирать, а нужно только установить. Если необходимо упаковать предварительно скомпилированный бинарный файл, Вы также можете использовать этот метод.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pello</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Программа, написанная на интерпретируемом языке программирования с байтовой компиляцией. Пример демонстрирует байтовую компиляцию исходного кода и установку байт-кода - результирующих, предварительно оптимизированных файлов.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Программа, написанная на интерпретируемом языке программирования с последующей байт-компиляцией. Пример демонстрирует байт-компиляцию исходного кода и установку байт-кода - результирующих, предварительно оптимизированных файлов.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cello</p></td>
@@ -2201,7 +2201,7 @@ pello.spec created; type minimal, rpm version &gt;= 4.11.</code></pre>
 <div class="sect4">
 <h5 id="bello-working-with-spec-files">bello</h5>
 <div class="paragraph">
-<p>Первый SPEK файл предназначен для программы <code>bello</code> bash shell script from
+<p>Первый SPEK файл создан для bash скрипта <code>bello</code> из раздела
 <a href="#preparing-software-for-packaging">Подготовка программного обеспечения для упаковки</a>.</p>
 </div>
 <div class="paragraph">
@@ -2526,14 +2526,14 @@ install -m 0755 %{name} %{buildroot}/%{_bindir}/%{name}
 <div class="sect4">
 <h5 id="pello-working-with-spec-files">pello</h5>
 <div class="paragraph">
-<p>Наш второй SPEC будет для примера, написанного на языке программирования the <a href="https://www.python.org/">Python</a>
-который вы скачали (или вы создали имитированный upstream- выпуск в разделе <a href="#preparing-software-for-packaging">Подготовка программного обеспечения</a>) и разместили его исходный код в <code>~/rpmbuild/SOURCES/</code>. Давайте продолжим и откроем файл  <code>~/rpmbuild/SPECS/pello.spec</code>  начнем заполнять некоторые поля.</p>
+<p>Наш второй SPEC будет для примера, написанного на языке программирования <a href="https://www.python.org/">Python</a>
+который Вы скачали (или создали имитированный upstream- выпуск в разделе <a href="#preparing-software-for-packaging">Подготовка программного обеспечения</a>) и разместили его исходный код в <code>~/rpmbuild/SOURCES/</code>. Давайте продолжим и откроем файл  <code>~/rpmbuild/SPECS/pello.spec</code>, и начнём заполнять некоторые поля.</p>
 </div>
 <div class="paragraph">
-<p>Прежде чем мы начнем идти по этому пути, нам нужно рассмотреть кое-что несколько уникальное в интерпретируемом программном обеспечении с байт-компиляцией. Поскольку использовать байт-компиляцию,
+<p>Прежде чем мы начнем идти по этому пути, нам нужно рассмотреть кое-что несколько уникальное в интерпретируемом программном обеспечении с последующей компиляцией в байт-код. Поскольку мы будем использовать компиляцию в байт-код,
 <a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29">shebang</a>
-больше не применим, поскольку результирующий файл не будет содержать запись. Обычной практикой является либо наличие небайтового скомпилированного сценария оболочки, который будет вызывать исполняемый файл, либо наличие небольшого фрагмента кода
-<a href="https://www.python.org/">Python</a> , который не скомпилирован в байтах, в качестве “точки входа” в выполнение программы. Это может показаться глупым для нашего небольшого примера, но для больших программных проектов со многими тысячами строк кода увеличение производительности при предварительной байт-компиляции кода является значительным.</p>
+больше не применим, поскольку результирующий файл не будет содержать эту запись. Общепринятой практикой является либо использование сценария оболочки без компиляции в байт-код, который будет вызывать исполняемый файл, либо наличие небольшого фрагмента кода
+<a href="https://www.python.org/">Python</a> , который не скомпилирован в байт-код, в качестве “точки входа” в выполнение программы. Это может показаться глупым для нашего небольшого примера, но для больших программных проектов со многими тысячами строк кода увеличение производительности при предварительной компиляции в байт-код является значительным.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2624,25 +2624,26 @@ Summary:        Hello World example implemented in Python</code></pre>
 <p>Теперь давайте перейдем ко второму набору директив, которые <code>rpmdev-newspec</code> сгруппировал вместе в нашем SPEC файле: <code>License</code>, <code>URL</code>, <code>Source0</code>.</p>
 </div>
 <div class="paragraph">
-<p>Поле <code>License</code> это
-<a href="https://en.wikipedia.org/wiki/Software_license">Лицензия на программное обеспечение</a> связанная с исходным кодом из upstream выпуска.  Точный формат обозначения лицензии в вашем файле  SPEC будет варьироваться в зависимости от того, каким конкретным рекомендациям по дистрибутиву
-<a href="https://en.wikipedia.org/wiki/Linux">Linux</a>, использующим RPM, вы следуете. Мы будем использовать стандарты обозначения из
+<p>Поле <code>License</code> - это
+<a href="https://en.wikipedia.org/wiki/Software_license">Лицензия на программное обеспечение</a>
+, связанная с исходным кодом из upstream выпуска.  Точный формат обозначения лицензии в вашем файле  SPEC будет варьироваться в зависимости от того, каким конкретным рекомендациям по дистрибутиву
+<a href="https://en.wikipedia.org/wiki/Linux">Linux</a>, использующему RPM, Вы следуете. Мы будем использовать стандарты обозначения из
 <a href="https://fedoraproject.org/wiki/Licensing:Main">Fedora Руководство по лицензированию</a>, поэтому это поле будет содержать лицензию <code>GPLv3+</code></p>
 </div>
 <div class="paragraph">
-<p>Поле <code>URL</code> - это веб-сайт upstream программного обеспечения. Это не ссылка на скачивание исходного кода, а фактический веб-сайт проекта, продукта или компании, где кто-то может найти больше информации об этой конкретной части программного обеспечения. Поскольку это просто пример, мы будем использовать адрес. <code><a href="https://example.com/pello" class="bare">https://example.com/pello</a></code>. Однако, мы применим макрос RPM  <code>%{name}</code> для корректности оформления.</p>
+<p>Поле <code>URL</code> - это веб-сайт upstream программного обеспечения. Это не ссылка на скачивание исходного кода, а фактический веб-сайт проекта, продукта или компании, где кто-то может найти больше информации о конкретной части программного обеспечения. Поскольку это просто пример, мы будем использовать адрес <code><a href="https://example.com/pello" class="bare">https://example.com/pello</a></code>. Однако, мы применим макрос RPM  <code>%{name}</code> для корректности оформления.</p>
 </div>
 <div class="paragraph">
-<p>Поле <code>Source0</code> это место, откуда должен быть загружен upstrem исходный код программного обеспечения. Этот URL-адрес должен содержать прямую ссылку на конкретную версию выпуска исходного кода, которую мы упаковываем. Еще раз, поскольку это пример, мы будем использовать ссылку на следующий архив:
-<code><a href="https://example.com/pello/releases/pello-0.1.1.tar.gz" class="bare">https://example.com/pello/releases/pello-0.1.1.tar.gz</a></code></p>
+<p>Поле <code>Source0</code> - это место, откуда должен быть загружен upstream исходный код программного обеспечения. Этот URL-адрес должен содержать прямую ссылку на конкретную версию выпуска исходного кода, которую мы упаковываем. Еще раз, поскольку это пример, мы будем использовать ссылку на следующий архив:
+<code><a href="https://example.com/pello/releases/pello-0.1.1.tar.gz" class="bare">https://example.com/pello/releases/pello-0.1.1.tar.gz</a></code>.</p>
 </div>
 <div class="paragraph">
-<p>Мы должны отметить, что в этом примере URL-адреса есть жестко закодированные значения, которые можно изменить в будущем и потенциально они даже могут измениться, например, версия выпуска <code>0.1.1</code>. Мы можем упростить это, если потребуется обновить только одно поле в SPEC файле и разрешить его повторное использование.
+<p>Мы должны отметить, что в этом примере URL-адреса есть жёстко закодированные значения, которые можно изменить в будущем, и потенциально они даже могут измениться, например, версия выпуска <code>0.1.1</code>. Мы можем упростить это, если потребуется обновить только одно поле в SPEC файле и разрешить его повторное использование.
 Мы будем использовать макросы
-<code><a href="https://example.com/%{name}/releases/%{name}-%{version}.tar.gz" class="bare">https://example.com/%{name}/releases/%{name}-%{version}.tar.gz</a></code>, вместо ссылок из примеров раннее.</p>
+<code><a href="https://example.com/%{name}/releases/%{name}-%{version}.tar.gz" class="bare">https://example.com/%{name}/releases/%{name}-%{version}.tar.gz</a></code> вместо ссылок из примеров раннее.</p>
 </div>
 <div class="paragraph">
-<p>После ваших изменений верхняя часть вашего SPEC файла должна выглядеть следующим образом:</p>
+<p>После ваших изменений верхняя часть Вашего SPEC файла должна выглядеть следующим образом:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2657,11 +2658,11 @@ Source0:        https://example.com/%{name}/release/%{name}-%{version}.tar.gz</c
 </div>
 </div>
 <div class="paragraph">
-<p>У нас есть секции <code>BuildRequires</code> и <code>Requires</code>, каждый из которых определяет что-то, что требуется для пакета. Однако , <code>BuildRequires</code> должен сообщать
-<code>rpmbuild</code> о том, что необходимо вашему пакету во время <strong>сборки</strong>, а<code>Requires</code> - это то, что необходимо вашему пакету во время <strong>установки</strong>.</p>
+<p>У нас есть секции <code>BuildRequires</code> и <code>Requires</code>, каждая из которых определяет что-то, что требуется для пакета. Однако , <code>BuildRequires</code> должен сообщать
+<code>rpmbuild</code> о том, что необходимо Вашему пакету во время <strong>сборки</strong>, а<code>Requires</code> - это то, что необходимо Вашему пакету во время <strong>установки</strong>.</p>
 </div>
 <div class="paragraph">
-<p>В этом примере нам понадобится пакет <code>python</code> для выполнения процесса сборки с байт-компиляцией.  Этот пакет понадобится во время выполнения байт-скомпилированного кода, поэтому нам необходимо определить <code>python</code> как требуемый пакет в директиве <code>Requires</code>. Нам также понадобится пакет <code>bash</code> для выполнения небольшого сценария точки входа, который мы будем использовать здесь.</p>
+<p>В этом примере нам понадобится пакет <code>python</code> для выполнения процесса сборки с компиляцией в байт-код.  Этот пакет понадобится во время выполнения скомпилированного байт-кода, поэтому нам необходимо определить <code>python</code> как требуемый пакет в директиве <code>Requires</code>. Нам также понадобится пакет <code>bash</code> для выполнения небольшого сценария точки входа, который мы будем использовать здесь.</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -2669,7 +2670,7 @@ Source0:        https://example.com/%{name}/release/%{name}-%{version}.tar.gz</c
 </div>
 </div>
 <div class="paragraph">
-<p>После ваших изменений верхняя часть вашего SPEC файла должна выглядеть следующим образом:</p>
+<p>После Ваших изменений верхняя часть Вашего SPEC файла должна выглядеть следующим образом:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2690,19 +2691,19 @@ BuildArch:      noarch</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Следующие директивы можно рассматривать как “заголовки разделов”, поскольку они являются директивами, которые могут определять многостроковые, скриптовые или состоящие из нескольких инструкций задачи. Мы пройдемся по ним один за другим, как и по предыдущим пунктам.</p>
+<p>Следующие директивы можно рассматривать как “заголовки разделов”, поскольку они являются директивами, которые могут определять многостроковые, скриптовые или состоящие из нескольких инструкций задачи. Мы пройдемся по ним одна за другой, как и по предыдущим пунктам.</p>
 </div>
 <div class="paragraph">
-<p>Секция %description - это более длинное и полное описание программного обеспечения, чем <code>Summary</code>, содержащее один или несколько абзацев. В нашем примере мы будем использовать только краткое описание. В нашем примере это секция не будет содержать глубокое описание, но при желании этот раздел может быть целым абзацем или более.</p>
+<p>Секция <code>%description</code> - это более длинное и полное описание программного обеспечения, чем <code>Summary</code>, содержащее один или несколько абзацев. В нашем примере мы будем использовать только краткое описание. Эта секция не будет содержать глубокое описание, но при желании раздел может быть целым абзацем или более.</p>
 </div>
 <div class="paragraph">
-<p>Секция <code>%prep</code> это место, где мы <em>подготавливаем</em> нашу среду сборки или рабочее пространство для сборки. Чаще всего здесь происходит расширение сжатых архивов исходного кода, применение исправлений и, возможно, анализ информации, предоставленной в исходном коде, которая необходима в следующей части  SPEC файла. IВ этом разделе мы просто будем использовать предоставленный макрос <code>%setup -q</code>.</p>
+<p>Секция <code>%prep</code> - это место, где мы <em>подготавливаем</em> нашу среду сборки или рабочее пространство для сборки. Чаще всего здесь происходит расширение сжатых архивов исходного кода, применение исправлений и, возможно, анализ информации, предоставленной в исходном коде, которая необходима в следующей части SPEC файла. В этом разделе мы просто будем использовать предоставленный макрос <code>%setup -q</code>.</p>
 </div>
 <div class="paragraph">
-<p>Секция <code>%build</code>- это раздел, где мы рассказываем системе, как на самом деле создавать программное обеспечение, которое мы упаковываем. Здесь мы выполним байтовую компиляцию нашего программного обеспечения. Для тех, кто читал раздел <a href="#preparing-software-for-packaging">Подготовка программного обеспечения</a>, эта часть примера должна показаться знакомой.</p>
+<p>Секция <code>%build</code>- это раздел, где мы рассказываем системе, как на самом деле собирать программное обеспечение, которое мы упаковываем. Здесь мы выполним компиляцию нашего программного обеспечения в байт-код. Для тех, кто читал раздел <a href="#preparing-software-for-packaging">Подготовка программного обеспечения</a>, эта часть примера должна показаться знакомой.</p>
 </div>
 <div class="paragraph">
-<p>Секчия <code>%build</code> нашего SPEC файла должна выглядеть следующим образом.</p>
+<p>Секция <code>%build</code> нашего SPEC файла должна выглядеть следующим образом:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2712,18 +2713,18 @@ python -m compileall pello.py</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Секция <code>%install</code> это раздел, отвечающий за инструктирование <code>rpmbuild</code>, как установить наше ранее созданное программное обеспечение в <code>BUILDROOT</code> который фактически является базовым каталогом
+<p>Секция <code>%install</code> - это раздел, отвечающий за инструктирование <code>rpmbuild</code>, устанавливающее наше ранее созданное программное обеспечение в <code>BUILDROOT</code>, который фактически является базовым каталогом
 <a href="https://en.wikipedia.org/wiki/Chroot">chroot</a>
-в котором ничего нет, и нам нужно будет создать любые пути или иерархии каталогов, которые нам понадобятся, чтобы установить наше программное обеспечение здесь в их определенных местах. Однако наши макросы RPM помогают нам выполнить эту задачу без необходимости жестко кодировать пути.</p>
+, в котором ничего нет, и нам нужно будет создать любые пути или иерархии каталогов, которые нам понадобятся, чтобы установить наше программное обеспечение в определенных местах. Однако наши макросы RPM помогают нам выполнить эту задачу без необходимости жестко кодировать пути.</p>
 </div>
 <div class="paragraph">
 <p>Ранее мы обсуждали, что, поскольку мы потеряем контекст файла со строкой
 <a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29">shebang</a>
-в нем при байт-компиляции, нам нужно будет создать простой сценарий-оболочку для выполнения этой задачи.  Есть много вариантов того, как это сделать, включая, но не ограничиваясь этим, создание отдельного скрипта и использование его в качестве отдельной директивы <code>SourceX</code>, а также вариант, который мы собираемся показать в этом примере, который заключается в создании файла в строке в SPEC файле. Причина, по которой мы показываем примерный вариант, заключается в том, чтобы просто продемонстрировать, что сам файл спецификации доступен для сценариев. Что мы собираемся сделать, так это создать небольшой “сценарий-оболочку”, который будет выполнять байт-скомпилированный код
-<a href="https://www.python.org/">Python</a> используя
+в нём при компиляции в байт-код, нам нужно будет создать простой сценарий-оболочку для выполнения этой задачи.  Есть много вариантов того, как это сделать, включая, но не ограничиваясь этим, создание отдельного скрипта и использование его в качестве отдельной директивы <code>SourceX</code>, а также вариант, который мы собираемся показать в этом примере, который заключается в сборке файла в строке в SPEC файле. Причина, по которой мы показываем примерный вариант, заключается в том, чтобы просто продемонстрировать, что сам файл спецификации доступен для сценариев. Мы собираемся создать небольшой “сценарий-оболочку”, который будет выполнять скомпилированный байт-код
+<a href="https://www.python.org/">Python</a>, используя
 <a href="https://en.wikipedia.org/wiki/Here_document">here document</a>
-. Нам также нужно будет фактически установить
-байт-скомпилированный файл в каталог библиотеки в системе, чтобы к нему можно было получить доступ.</p>
+. Нам также нужно будет установить
+скомпилированный байт-код в каталог библиотеки в системе, чтобы к нему можно было получить доступ.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2732,7 +2733,7 @@ python -m compileall pello.py</code></pre>
 <div class="title">Note</div>
 </td>
 <td class="content">
-Ниже вы заметите, что мы жестко кодируем путь к библиотеке. Существуют различные методы, позволяющие избежать необходимости делать это, многие из которых рассматриваются в
+Ниже Вы заметите, что мы жестко кодируем путь к библиотеке. Существуют различные методы, позволяющие избежать необходимости делать это, многие из которых рассматриваются в
 <a href="#дополнительных разделах">[дополнительных разделах]</a>, в разделе <a href="#more-on-macros">Подрбнее о макросах</a>, и специфичны для языка программирования, на котором было написано упаковываемое программное обеспечение. В этом примере мы жестко закодировали путь для простоты, чтобы не охватывать слишком много тем одновременно.
 </td>
 </tr>
@@ -2759,10 +2760,10 @@ install -m 0644 %{name}.py* %{buildroot}/usr/lib/%{name}/</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Секция <code>%files</code> это место, где мы предоставляем список файлов, которые предоставляет этот RPM, и где они должны находиться в системе, на которую установлен RPM. Обратите внимание, что это относится не к <code>%{buildroot}</code> а к полному пути к файлам, поскольку ожидается, что они будут существовать в конечной системе после установки. Таким образом, список устанавливаемого файла <code>pello</code>  будет <code>%{_bindir}/pello</code>.  Нам также нужно будет предоставить список <code>%dir</code>, чтобы определить, что этот пакет “владеет” каталогом библиотеки, который мы создали, а также всеми файлами, которые мы разместили в нем.</p>
+<p>Секция <code>%files</code> - это место, где мы предоставляем список файлов, которые предоставляет этот RPM и где они должны находиться в системе, на которую установлен RPM. Обратите внимание, что это относится не к <code>%{buildroot}</code>, а к полному пути к файлам, поскольку ожидается, что они будут существовать в конечной системе после установки. Таким образом, список устанавливаемого файла <code>pello</code>  будет: <code>%{_bindir}/pello</code>.  Нам также нужно будет предоставить список <code>%dir</code>, чтобы определить, что этот пакет “владеет” каталогом библиотеки, который мы создали, а также всеми файлами, которые мы разместили в нём.</p>
 </div>
 <div class="paragraph">
-<p>Кроме того, в этом разделе вам иногда понадобится встроенный макрос для предоставления контекста для файла. Это может быть полезно для системных администраторов и конечных пользователей, которые могут захотеть запросить систему с помощью <code>rpm</code> о конечном пакете. Встроенный макрос, который мы будем использовать здесь, - это <code>%license</code>, который сообщит <code>rpmbuild</code>, что это файл лицензии на программное обеспечение в метаданных манифеста файла пакета.</p>
+<p>Кроме того, в этом разделе Вам иногда понадобится встроенный макрос для предоставления контекста файла. Это может быть полезно для системных администраторов и конечных пользователей, которые могут захотеть запросить систему о конечном пакете с помощью <code>rpm</code>. Встроенный макрос, который мы будем использовать здесь, - это <code>%license</code>, который сообщит <code>rpmbuild</code>, что это файл лицензии на программное обеспечение в метаданных манифеста файла пакета.</p>
 </div>
 <div class="paragraph">
 <p>Секция <code>%files</code> после Ваших изменений должен выглядеть следующим образом:</p>
@@ -2777,7 +2778,7 @@ install -m 0644 %{name}.py* %{buildroot}/usr/lib/%{name}/</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Последняя секция, <code>%changelog</code>, представляет собой список записей с отметками о дате, которые соотносятся с конкретной версией-выпуском пакета. Это не журнал изменений в программном обеспечении от выпуска к выпуску, а конкретно изменения в упаковке. Например, если программное обеспечение в пакете нуждалось в исправлении или было необходимо внести изменения в процедуру сборки, указанную в секции<code>%build</code>, эта информация будет размещена здесь. Каждая запись изменения может содержать несколько элементов, и каждый элемент должен начинаться с новой строки и начинаться с символа <code>-</code>.
+<p>Последняя секция, <code>%changelog</code>, представляет собой список записей с отметками о дате, которые соотносятся с конкретной версией-выпуском пакета. Это не журнал изменений в программном обеспечении от выпуска к выпуску, а конкретно изменения в упаковке. Например, если программное обеспечение в пакете нуждалось в исправлении или было необходимо внести изменения в процедуру сборки, указанную в секции<code>%build</code>, эта информация будет размещена здесь. Каждая запись изменения может содержать несколько элементов, и каждый элемент должен начинаться с новой строки и символа <code>-</code>.
 Ниже приведен наш пример записи:</p>
 </div>
 <div class="listingblock">
@@ -2789,7 +2790,7 @@ install -m 0644 %{name}.py* %{buildroot}/usr/lib/%{name}/</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Обратите внимание на приведенный выше формат, отметка даты будет начинаться с символа <code>*</code>, за которым следует календарный день недели, месяц, день месяца, год, затем контактная информация для упаковщика RPM. Оттуда у нас есть символ<code>-</code> перед выпуском версии, что является часто используемым, но не строго регламентированным. Затем, наконец, Версия-Релиз.</p>
+<p>Обратите внимание на приведенный выше формат: отметка даты будет начинаться с символа <code>*</code>, за которым следует календарный день недели, месяц, день месяца, год, затем контактная информация для упаковщика RPM. Оттуда у нас есть символ<code>-</code> перед выпуском версии, что является часто используемым, но не строго регламентированным. Затем, наконец, Версия-Релиз.</p>
 </div>
 <div class="paragraph">
 <p>Вот и все! Мы написали целый файл спецификаций для <strong>pello</strong>! В следующем разделе мы расскажем, как создать RPM!</p>
@@ -5039,7 +5040,7 @@ Attribution-ShareAlike 3.0 Unported License</a>.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-09-04 22:07:44 +0400
+Last updated 2022-09-06 17:28:53 +0400
 </div>
 </div>
 </body>
