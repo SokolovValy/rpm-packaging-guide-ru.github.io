@@ -498,7 +498,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#what-is-a-spec-file">Что такое SPEC файл?</a></li>
 <li><a href="#buildroots">BuildRoots</a></li>
 <li><a href="#rpm-macros">RPM Макросы</a></li>
-<li><a href="#working-with-spec-files">Работа со SPEK файлами</a></li>
+<li><a href="#working-with-spec-files">Работа со SPEC файлами</a></li>
 </ul>
 </li>
 <li><a href="#building-rpms">Создание RPMS</a>
@@ -1959,7 +1959,7 @@ python-2.7.5-34.el7.x86_64</code></pre>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>%install</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Команда или серия команд для копирования требуемых артефактов сборки из <code>%builddir</code> (где происходит сборка) в<code>%buildroot</code> каталог (который содержит структуру каталогов с файлами, подлежащими упаковке). Обычно это означает копирование файлов из <code>~/rpmbuild/BUILD</code> в <code>~/rpmbuild/BUILDROOT</code> и создание необходимых каталогов <code>~/rpmbuild/BUILDROOT</code>.  Это выполняется только при создании пакета, а не при установке пакета конечным пользователем. Подробности см. в разделе <a href="#working-with-spec-files">Работа со SPEK файлом</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Команда или серия команд для копирования требуемых артефактов сборки из <code>%builddir</code> (где происходит сборка) в<code>%buildroot</code> каталог (который содержит структуру каталогов с файлами, подлежащими упаковке). Обычно это означает копирование файлов из <code>~/rpmbuild/BUILD</code> в <code>~/rpmbuild/BUILDROOT</code> и создание необходимых каталогов <code>~/rpmbuild/BUILDROOT</code>.  Это выполняется только при создании пакета, а не при установке пакета конечным пользователем. Подробности см. в разделе <a href="#working-with-spec-files">Работа со SPEC файлом</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>%check</code></p></td>
@@ -2075,7 +2075,7 @@ $ rpm --eval %{?dist}
 </div>
 </div>
 <div class="sect3">
-<h4 id="working-with-spec-files">Работа со SPEK файлами</h4>
+<h4 id="working-with-spec-files">Работа со SPEC файлами</h4>
 <div class="paragraph">
 <p>Большая часть упаковки программного обеспечения в RPMs - это редактирование файла спецификации. В этом разделе мы обсудим, как создать и изменить SPEC файл.</p>
 </div>
@@ -2144,7 +2144,7 @@ pello.spec created; type minimal, rpm version &gt;= 4.11.</code></pre>
 </div>
 <div class="paragraph">
 <p>Изучите файлы. Директивы в них представляют собой директивы, описанные в разделе
-<a href="#what-is-a-spec-file">Что такое SPEK файл</a>.  В следующих разделах Вы заполните эти файлы спецификаций.</p>
+<a href="#what-is-a-spec-file">Что такое SPEC файл</a>.  В следующих разделах Вы заполните эти файлы спецификаций.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2201,7 +2201,7 @@ pello.spec created; type minimal, rpm version &gt;= 4.11.</code></pre>
 <div class="sect4">
 <h5 id="bello-working-with-spec-files">bello</h5>
 <div class="paragraph">
-<p>Первый SPEK файл создан для bash скрипта <code>bello</code> из раздела
+<p>Первый SPEC файл создан для bash скрипта <code>bello</code> из раздела
 <a href="#preparing-software-for-packaging">Подготовка программного обеспечения для упаковки</a>.</p>
 </div>
 <div class="paragraph">
